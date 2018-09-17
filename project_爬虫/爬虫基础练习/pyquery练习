@@ -1,0 +1,11 @@
+from pyquery import PyQuery as pq
+from bs4 import BeautifulSoup
+"""html=pq(filename='html.html')
+all_in_onepage = html('.list-list')
+print(all_in_onepage)
+print(all_in_onepage.find('.list-list li').attr(('data-aid')))
+"""
+soup=BeautifulSoup(html.html,'lxml')
+#print(soup)
+one_data=soup.find_all("li",{"class":re.compile('list-item')})
+print(one_data)
